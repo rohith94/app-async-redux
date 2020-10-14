@@ -5,9 +5,9 @@ export const normalFetchPost = () => {
 };
 
 export const fetchPost = () => {
-  return async  (dispatch, getState)=> {
-    const response = await JsonPlaceHolder.get("/posts");
+  return async (dispatch, getState) => {
+    const { data } = await JsonPlaceHolder.get("/posts");
 
-    dispatch({ type: "FETCH_POSTS", payload: response });
+    dispatch({ type: "FETCH_POSTS", payload: data });
   };
 };

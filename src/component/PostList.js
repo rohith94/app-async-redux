@@ -7,12 +7,13 @@ class PostList extends Component {
     this.props.fetchPost();
   }
   render() {
+    console.log(this.props);
     return <div>hi</div>;
   }
 }
 
 const mapStateToProp = (state) => {
-  return {};
+  return { posts: state.posts };
 };
 
 export default connect(mapStateToProp, { fetchPost: fetchPost })(PostList);
